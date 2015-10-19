@@ -7,7 +7,11 @@ Thermostat.prototype.increaseBy = function(number){
 };
 
 Thermostat.prototype.decreaseBy = function(number){
-  return this.temperature = this.temperature - number;
+  if ((this.temperature -number) < 10) {
+    return "temperature too low";
+  } else {
+    return this.temperature = this.temperature - number;
+  }
 };
 
 Thermostat.prototype.resetTemp = function() {
