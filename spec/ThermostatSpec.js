@@ -17,8 +17,13 @@ describe('Thermostat', function(){
   describe('settings can be modified', function(){
 
     it('temperature can be increased', function(){
-      thermostat.increaseBy(5);
-      expect(thermostat.temperature).toBe(25);
+      thermostat.increaseBy(1);
+      expect(thermostat.temperature).toBe(21);
+    });
+
+    it('temperature can be decreased', function(){
+      thermostat.decreaseBy(1);
+      expect(thermostat.temperature).toBe(19);
     });
 
   });
