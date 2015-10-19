@@ -41,23 +41,24 @@ describe('Thermostat', function(){
     });
 
     it('temperature can not exceed 25 degrees when power saving mode is on', function(){
-      thermostat.powerSavemode = true
       expect(thermostat.increaseBy(6)).toBe("temperature limit!")
     });
 
     it('temperature can not exceed 32 degrees when power saving mode is off', function(){
+      thermostat.powerSaveMode = false
       expect(thermostat.increaseBy(13)).toBe("temperature limit!")
     });
 
     it ('can turn PSM off', function() {
+      thermostat.powerSaveMode = true
       thermostat.psmswitch()
-      thermostat.psmswitch()
-      expect(thermostat.powerSavemode).toEqual(false)
+      expect(thermostat.powerSaveMode).toEqual(false)
     });
 
     it ('can turn PSM on', function() {
       thermostat.psmswitch()
-      expect(thermostat.powerSavemode).toEqual(true)
+      thermostat.psmswitch()
+      expect(thermostat.powerSaveMode).toEqual(true)
     });
 
   });
