@@ -12,6 +12,10 @@ describe('Thermostat', function(){
       expect(thermostat.temperature).toBe(20);
     });
 
+    it('and by default is on power saving mode', function() {
+      expect(thermostat.powerSaveMode).toBe(true);
+    });
+
   });
 
   describe('settings can be modified', function(){
@@ -34,6 +38,15 @@ describe('Thermostat', function(){
 
     it('value can not go below 10 degrees', function(){
       expect(thermostat.decreaseBy(11)).toBe("temperature too low")
+    });
+
+    it('temperature can not exceed 25 degrees when power saving mode is on', function(){
+      thermostat.powerSavemode = true
+      expect(thermostat.increaseBy(6)).toBe("temperature limit!")
+    });
+
+    it('temperature can not exceed 32 degrees when power saving mode is off', function(){
+      expect(thermostat.increaseBy(13)).toBe("temperature limit!")
     });
 
   });
