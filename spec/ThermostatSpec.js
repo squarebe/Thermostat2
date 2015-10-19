@@ -26,6 +26,12 @@ describe('Thermostat', function(){
       expect(thermostat.temperature).toBe(19);
     });
 
+    it('and be reset to default', function() {
+      thermostat.increaseBy(5)
+      thermostat.resetTemp()
+      expect(thermostat.temperature).toBe(20)
+    });
+
   });
 
 });

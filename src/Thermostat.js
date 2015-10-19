@@ -9,3 +9,7 @@ Thermostat.prototype.increaseBy = function(number){
 Thermostat.prototype.decreaseBy = function(number){
   return this.temperature = this.temperature - number;
 };
+
+Thermostat.prototype.resetTemp = function() {
+  return this.temperature = 20
+};
