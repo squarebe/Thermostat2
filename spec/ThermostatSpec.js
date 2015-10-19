@@ -6,10 +6,19 @@ describe('Thermostat', function(){
 
   var thermostat;
 
-  describe('thermostat should show current termperature', function(){
+  describe('should show current termperature', function(){
 
-    it('thermostat starts at 20 degrees', function(){
+    it('it starts at 20 degrees', function(){
       expect(thermostat.temperature).toBe(20);
+    });
+
+  });
+
+  describe('settings can be modified', function(){
+
+    it('temperature can be increased', function(){
+      thermostat.increaseBy(5);
+      expect(thermostat.temperature).toBe(25);
     });
 
   });
