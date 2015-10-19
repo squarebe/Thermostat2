@@ -7,3 +7,8 @@ function increase() {
   document.getElementsByTagName("h1")[0].innerHTML =
   thermostat.temperature + ' &deg;C'
 };
+function decrease() {
+  thermostat.decreaseBy(1)
+  document.getElementsByTagName("h1")[0].innerHTML =
+  thermostat.temperature + ' &deg;C'
+};
