@@ -30,3 +30,11 @@ Thermostat.prototype.decreaseBy = function(number){
 Thermostat.prototype.resetTemp = function() {
   return this.temperature = 20
 };
+
+Thermostat.prototype.psmswitch = function() {
+  if (this.powerSavemode) {
+    this.powerSavemode = false;
+  } else {
+    this.powerSavemode = true;
+  }
+};

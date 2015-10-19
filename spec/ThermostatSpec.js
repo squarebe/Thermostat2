@@ -49,6 +49,17 @@ describe('Thermostat', function(){
       expect(thermostat.increaseBy(13)).toBe("temperature limit!")
     });
 
+    it ('can turn PSM off', function() {
+      thermostat.psmswitch()
+      thermostat.psmswitch()
+      expect(thermostat.powerSavemode).toEqual(false)
+    });
+
+    it ('can turn PSM on', function() {
+      thermostat.psmswitch()
+      expect(thermostat.powerSavemode).toEqual(true)
+    });
+
   });
 
 });
