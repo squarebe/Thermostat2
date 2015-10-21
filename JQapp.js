@@ -13,9 +13,9 @@ $(document).ready(function() {
     });
   };
   var weatherAPI = function (city) {
-    $.ajax("http://api.openweathermap.org/data/2.5/weather?q=London&APPID="+API_KEY, {
+    $.ajax("http://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID="+API_KEY, {
       success: function (data) {
-        $('h2').html(Math.round(data.main.temp-273.15));
+        $('h2').html( "Currently in "+data.name+" is "+Math.round(data.main.temp-273.15)+"\u00B0C" )
       }
     });
   };
