@@ -11,3 +11,6 @@ If power saving mode is off, the maximum temperature is 32 degrees
 Power saving mode is on by default
 You can reset the temperature to 20 by hitting the reset button
 The thermostat should colour the display based on energy usage - < 18 is green, < 25 is yellow, otherwise red
+
+added weatherAPI function shows the current temperature, soon will be selectable by user.
+you will need an APIKEY in a secrets file to get this to function!!
