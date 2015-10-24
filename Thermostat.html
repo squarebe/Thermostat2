@@ -5,37 +5,39 @@
     <link rel="stylesheet" type="text/css" href="app/style.css">
   </head><br>
   <body>
-  <div class="content">
-  <h1>
-    i want to see the current temperature here!! well done!
-  </h1>
+    <div class="content">
 
-  <main class="grid">
-    <section class="display">
-      <incbutton>
-        <button class="increaseBy">+</button>
-      </incbutton>
-      <decbutton>
-        <button class="decreaseBy">-</button>
-      </decbutton>
-      <resetbutton>
-        <button class="reset">Reset</button>
-      </resetbutton>
-      <PSMbutton class="blacktext">
-        Power Saving Mode:<input type="checkbox" checked>
-      </PSMbutton>
-    </section>
-  </main>
-  <div class="blacktext">
-  <h2 id="temp">current temp goes here</h2>
-  Enter your city:<input type="text" id="city">
-  <button type="button" id="submit">Set</button>
-  </div>
-  </div>
-  <script type="text/javascript" src="src/Thermostat.js"></script>
-  <script type="text/javascript" src="src/secrets.js"></script>
-  <script type="text/javascript" src="jquery.js"></script>
-  <script type="text/javascript" src="JQapp.js"></script>
+      <div class="LCD">
+        <h1>
+          i want to see the current temperature here!! well done!
+        </h1>
+        <PSMbutton class="blacktext">
+          Power Saving Mode:<input type="checkbox" checked>
+        </PSMbutton>
+      </div>
 
+      <div class="buttons">
+        <incbutton>
+          <button class="increaseBy">+</button>
+        </incbutton>
+        <decbutton>
+          <button class="decreaseBy">-</button>
+        </decbutton>
+        <resetbutton>
+          <button class="reset">Reset</button>
+        </resetbutton>
+      </div>
+
+      <div class="blacktext">
+        <h2 id="temp">current temp goes here</h2>
+        Enter your city:<input type="text" id="city">
+        <button type="button" id="submit">Set</button>
+      </div>
+
+    </div>
+    <script type="text/javascript" src="src/Thermostat.js"></script>
+    <script type="text/javascript" src="src/secrets.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="JQapp.js"></script>
   </body>
 </html>
